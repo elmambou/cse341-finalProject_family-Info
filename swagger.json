@@ -1,8 +1,8 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Contact API",
+    "title": "Final Team Project CSE 341",
+    "description": "Family Information API",
     "version": "1.0.0"
   },
   "host": "typescript-project.onrender.com",
@@ -54,19 +54,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
+                "username": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "password": {
                   "example": "any"
                 },
-                "birthday": {
+                "role": {
+                  "example": "any"
+                },
+                "createdAt": {
+                  "example": "any"
+                },
+                "updatedAt": {
                   "example": "any"
                 }
               }
@@ -118,19 +121,22 @@
             "schema": {
               "type": "object",
               "properties": {
-                "firstName": {
-                  "example": "any"
-                },
-                "lastName": {
+                "username": {
                   "example": "any"
                 },
                 "email": {
                   "example": "any"
                 },
-                "favoriteColor": {
+                "password": {
                   "example": "any"
                 },
-                "birthday": {
+                "role": {
+                  "example": "any"
+                },
+                "createdAt": {
+                  "example": "any"
+                },
+                "updatedAt": {
                   "example": "any"
                 }
               }
@@ -184,6 +190,10 @@
                 "type": {
                   "type": "string",
                   "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "john_doe"
                 }
               }
             },
@@ -193,6 +203,10 @@
                 "type": {
                   "type": "string",
                   "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "john@example.com"
                 }
               }
             },
@@ -202,6 +216,10 @@
                 "type": {
                   "type": "string",
                   "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "hashed_password"
                 }
               }
             },
@@ -211,6 +229,10 @@
                 "type": {
                   "type": "string",
                   "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "admin"
                 }
               }
             },
@@ -219,7 +241,15 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "example": "Date"
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2023-01-15T08:00:00Z"
                 }
               }
             },
@@ -228,7 +258,15 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "example": "Date"
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2023-01-15T08:00:00Z"
                 }
               }
             }
@@ -242,7 +280,7 @@
             "password",
             "role",
             "createdAt",
-            "updateAt"
+            "updatedAt"
           ],
           "items": {
             "type": "string"
