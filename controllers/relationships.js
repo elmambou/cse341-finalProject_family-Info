@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const relationshipId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('relationships').find({ _id: relationshipIdId });
+  const result = await mongodb.getDb().db().collection('relationships').find({ _id: relationshipId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);

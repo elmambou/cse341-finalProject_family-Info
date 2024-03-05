@@ -11,7 +11,7 @@ const getAll = async (req, res) => {
 
 const getSingle = async (req, res) => {
   const addressId = new ObjectId(req.params.id);
-  const result = await mongodb.getDb().db().collection('addresses').find({ _id: addressIdId });
+  const result = await mongodb.getDb().db().collection('addresses').find({ _id: addressId });
   result.toArray().then((lists) => {
     res.setHeader('Content-Type', 'application/json');
     res.status(200).json(lists[0]);
