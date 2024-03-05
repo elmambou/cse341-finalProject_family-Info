@@ -1,0 +1,29 @@
+{
+        "user": {
+    "username": "john_doe", 
+    "email": "john@example.com", 
+    "password": "hashed_password",
+    "role": "admin", 
+    "createdAt": "2023-01-15T08:00:00Z", 
+    "updatedAt": "2023-01-15T08:00:00Z"
+    },
+
+
+    "user2": {
+    "username": "jane_doe", 
+    "email": "jane@example.com", 
+    "password": "hashed_password", 
+    "role": "editor", 
+    "createdAt": "2023-02-20T08:00:00Z", 
+    "updatedAt": "2023-02-20T08:00:00Z"
+    },
+
+    "user3":{
+    "username": "smith_family", 
+    "email": "smith@example.com", 
+    "password": "hashed_password", 
+    "role": "viewer", 
+    "createdAt": "2023-03-25T08:00:00Z",
+    "updatedAt": "2023-03-25T08:00:00Z"
+    }
+}

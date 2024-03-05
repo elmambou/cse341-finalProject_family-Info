@@ -1,0 +1,26 @@
+{
+"birthday": {
+"individual_id": "61e733ac3e0fa10345bce084",
+"birthdate": "1980-05-12",
+"user_id": "61e733ac3e0fa10345bce081",
+"createdAt": "2023-10-15T08:00:00Z",
+"updatedAt": "2023-10-15T08:00:00Z"
+},
+
+
+"birthday2": {
+"individual_id": "61e733ac3e0fa10345bce085",
+"birthdate": "1982-09-20",
+"user_id": "61e733ac3e0fa10345bce081",
+"createdAt": "2023-11-28T08:00:00Z",
+"updatedAt": "2023-11-28T08:00:00Z"
+},
+
+"birthday3":{
+"individual_id": "61e733ac3e0fa10345bce086", 
+"birthdate": "2010-03-10",
+"user_id": "61e733ac3e0fa10345bce082",
+"createdAt": "2023-12-31T08:00:00Z", 
+"updatedAt": "2023-12-31T08:00:00Z"
+}
+}

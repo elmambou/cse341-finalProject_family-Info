@@ -1,0 +1,35 @@
+{
+"individual": {
+     "name": "John Doe", 
+     "gender": "Male",
+     "birthdate": "1980-05-12",
+     "relationToHead": "Father",
+     "user_id": "61e733ac3e0fa10345bce081", 
+     "createdAt": "2023-04-02T08:00:00Z", 
+     "updatedAt": "2023-04-02T08:00:00Z"
+        
+},
+
+
+"individual2": {
+    "name": "Jane Doe", 
+    "gender": "Female", 
+    "birthdate": "1982-09-20", 
+    "relationToHead": "Mother",
+    "user_id": "61e733ac3e0fa10345bce081", 
+    "createdAt": "2023-05-15T08:00:00Z", 
+    "updatedAt": "2023-05-15T08:00:00Z"
+    
+},
+
+"individual3":{
+    "name": "Sam Doe", 
+    "gender": "Male", 
+    "birthdate": "2010-03-10", 
+    "relationToHead": "Son", 
+    "user_id": "61e733ac3e0fa10345bce082", 
+    "createdAt": "2023-06-28T08:00:00Z", 
+    "updatedAt": "2023-06-28T08:00:00Z"
+    
+}
+}

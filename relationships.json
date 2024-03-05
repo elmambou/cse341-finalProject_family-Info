@@ -1,0 +1,29 @@
+{
+"relationship": {
+"individual1_id": "61e733ac3e0fa10345bce084",
+"individual2_id": "61e733ac3e0fa10345bce086", 
+"relationship_type": "child",
+"user_id": "61e733ac3e0fa10345bce081", 
+"createdAt": "2024-02-18T08:00:00Z", 
+"updatedAt": "2024-02-18T08:00:00Z"
+},
+
+
+"relationship2": {
+"individual1_id": "61e733ac3e0fa10345bce084", 
+"individual2_id": "61e733ac3e0fa10345bce085",
+"relationship_type": "spouse",
+"user_id": "61e733ac3e0fa10345bce081",
+"createdAt": "2024-01-05T08:00:00Z",
+"updatedAt": "2024-01-05T08:00:00Z" 
+},
+
+"relationship3":{
+"individual1_id": "61e733ac3e0fa10345bce085", 
+"individual2_id": "61e733ac3e0fa10345bce086", 
+"relationship_type": "parent",
+"user_id": "61e733ac3e0fa10345bce081",
+"createdAt": "2024-03-10T08:00:00Z",
+"updatedAt": "2024-03-10T08:00:00Z"
+}
+}
