@@ -20,11 +20,12 @@ const getSingle = async (req, res) => {
 
 const createUser = async (req, res) => {
   const user = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    username: req.body.username,
     email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    password: req.body.password,
+    role: req.body.role,
+    createdAt: req.body.createdAt,
+    updatedAt: req.body.updatedAt
   };
   const response = await mongodb.getDb().db().collection('users').insertOne(user);
   if (response.acknowledged) {
@@ -38,11 +39,12 @@ const updateUser = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
   const user = {
-    firstName: req.body.firstName,
-    lastName: req.body.lastName,
+    username: req.body.username,
     email: req.body.email,
-    favoriteColor: req.body.favoriteColor,
-    birthday: req.body.birthday
+    password: req.body.password,
+    role: req.body.role,
+    createdAt: req.body.createdAt,
+    updatedAt: req.body.updatedAt
   };
   const response = await mongodb
     .getDb()

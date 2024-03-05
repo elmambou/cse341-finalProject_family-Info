@@ -5,8 +5,8 @@ const doc = {
     title: 'My API',
     description: 'Contact API'
   },
-  host: 'localhost:8083',
-  schemes: ['http'],
+  host: 'typescript-project.onrender.com',
+  schemes: ['https'],
   consumes: ['application/json'],
   produces: ['application/json'],
   tags: [
