@@ -13,6 +13,14 @@ const doc = {
     {
       "name": "users",
       "description": "Operations related to users"
+    },
+    {
+      "name": "addresses",
+      "description": "Operations related to addresses"
+    },
+    {
+      "name": "relationships",
+      "description": "Operations related to relationships"
     }
   ],
   "schemes": [
@@ -25,30 +33,30 @@ const doc = {
     "application/json"
   ],
   "paths": {
-    "/users": {
+    "/addresses": {
       "get": {
-        "summary": "Get all users",
+        "summary": "Get all addresses",
         "responses": {
           "200": {
             "description": "OK",
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/User"
+                "$ref": "#/definitions/Address"
               }
             }
           }
         }
       },
       "post": {
-        "summary": "Create a new user",
+        "summary": "Create a new address",
         "parameters": [
           {
-            "name": "user",
+            "name": "address",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/Address"
             }
           }
         ],
@@ -62,9 +70,9 @@ const doc = {
         }
       }
     },
-    "/users/{id}": {
+    "/addresses/{id}": {
       "get": {
-        "summary": "Get user by ID",
+        "summary": "Get address by ID",
         "parameters": [
           {
             "name": "id",
@@ -77,13 +85,13 @@ const doc = {
           "200": {
             "description": "OK",
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/Address"
             }
           }
         }
       },
       "put": {
-        "summary": "Update user by ID",
+        "summary": "Update address by ID",
         "parameters": [
           {
             "name": "id",
@@ -92,11 +100,11 @@ const doc = {
             "type": "string"
           },
           {
-            "name": "user",
+            "name": "address",
             "in": "body",
             "required": true,
             "schema": {
-              "$ref": "#/definitions/User"
+              "$ref": "#/definitions/Address"
             }
           }
         ],
@@ -110,7 +118,111 @@ const doc = {
         }
       },
       "delete": {
-        "summary": "Delete user by ID",
+        "summary": "Delete address by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/relationships": {
+      "get": {
+        "summary": "Get all relationships",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Relationship"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create a new relationship",
+        "parameters": [
+          {
+            "name": "relationship",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Relationship"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      }
+    },
+    "/relationships/{id}": {
+      "get": {
+        "summary": "Get relationship by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/definitions/Relationship"
+            }
+          }
+        }
+      },
+      "put": {
+        "summary": "Update relationship by ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "relationship",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Relationship"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "No Content"
+          },
+          "500": {
+            "description": "Internal Server Error"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete relationship by ID",
         "parameters": [
           {
             "name": "id",
@@ -131,37 +243,77 @@ const doc = {
     }
   },
   "definitions": {
-    "User": {
+    "Address": {
       "type": "object",
       "properties": {
-        "username": {
+        "street": {
           "type": "string",
-          "example": "john_doe"
+          "example": "123 Main St"
         },
-        "email": {
+        "city": {
           "type": "string",
-          "example": "john@example.com"
+          "example": "Anytown"
         },
-        "password": {
+        "state": {
           "type": "string",
-          "example": "hashed_password"
+          "example": "CA"
         },
-        "role": {
+        "zipcode": {
           "type": "string",
-          "example": "admin"
+          "example": "12345"
+        },
+        "country": {
+          "type": "string",
+          "example": "USA"
+        },
+        "user_id": {
+          "type": "string",
+          "example": "61e733ac3e0fa10345bce081"
         },
         "createdAt": {
           "type": "string",
           "format": "date-time",
-          "example": "2023-01-15T08:00:00Z"
+          "example": "2023-07-10T08:00:00Z"
         },
         "updatedAt": {
           "type": "string",
           "format": "date-time",
-          "example": "2023-01-15T08:00:00Z"
+          "example": "2023-07-10T08:00:00Z"
         }
       },
-      "required": ["username", "email", "password", "role", "createdAt", "updatedAt"]
+      "required": ["street", "city", "state", "zipcode", "country", "user_id", "createdAt", "updatedAt"]
+    },
+    "Relationship": {
+      "type": "object",
+      "properties": {
+        "individual1_id": {
+          "type": "string",
+          "example": "61e733ac3e0fa10345bce084"
+        },
+        "individual2_id": {
+          "type": "string",
+          "example": "61e733ac3e0fa10345bce086"
+        },
+        "relationship_type": {
+          "type": "string",
+          "example": "child"
+        },
+        "user_id": {
+          "type": "string",
+          "example": "61e733ac3e0fa10345bce081"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2024-02-18T08:00:00Z"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "example": "2024-02-18T08:00:00Z"
+        }
+      },
+      "required": ["individual1_id", "individual2_id", "relationship_type", "user_id", "createdAt", "updatedAt"]
     }
   }
 };

@@ -11,6 +11,14 @@
     {
       "name": "users",
       "description": "Operations related to users"
+    },
+    {
+      "name": "addresses",
+      "description": "Operations related to addresses"
+    },
+    {
+      "name": "relationships",
+      "description": "Operations related to relationships"
     }
   ],
   "schemes": [
@@ -174,7 +182,7 @@
     }
   },
   "definitions": {
-    "User": {
+    "Address": {
       "type": "object",
       "properties": {
         "type": {
@@ -184,7 +192,7 @@
         "properties": {
           "type": "object",
           "properties": {
-            "username": {
+            "street": {
               "type": "object",
               "properties": {
                 "type": {
@@ -193,11 +201,11 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "john_doe"
+                  "example": "123 Main St"
                 }
               }
             },
-            "email": {
+            "city": {
               "type": "object",
               "properties": {
                 "type": {
@@ -206,11 +214,11 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "john@example.com"
+                  "example": "Anytown"
                 }
               }
             },
-            "password": {
+            "state": {
               "type": "object",
               "properties": {
                 "type": {
@@ -219,11 +227,11 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "hashed_password"
+                  "example": "CA"
                 }
               }
             },
-            "role": {
+            "zipcode": {
               "type": "object",
               "properties": {
                 "type": {
@@ -232,7 +240,33 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "admin"
+                  "example": "12345"
+                }
+              }
+            },
+            "country": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "USA"
+                }
+              }
+            },
+            "user_id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "61e733ac3e0fa10345bce081"
                 }
               }
             },
@@ -249,7 +283,7 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "2023-01-15T08:00:00Z"
+                  "example": "2023-07-10T08:00:00Z"
                 }
               }
             },
@@ -266,7 +300,7 @@
                 },
                 "example": {
                   "type": "string",
-                  "example": "2023-01-15T08:00:00Z"
+                  "example": "2023-07-10T08:00:00Z"
                 }
               }
             }
@@ -275,10 +309,126 @@
         "required": {
           "type": "array",
           "example": [
-            "username",
-            "email",
-            "password",
-            "role",
+            "street",
+            "city",
+            "state",
+            "zipcode",
+            "country",
+            "user_id",
+            "createdAt",
+            "updatedAt"
+          ],
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "Relationship": {
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string",
+          "example": "object"
+        },
+        "properties": {
+          "type": "object",
+          "properties": {
+            "individual1_id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "61e733ac3e0fa10345bce084"
+                }
+              }
+            },
+            "individual2_id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "61e733ac3e0fa10345bce086"
+                }
+              }
+            },
+            "relationship_type": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "child"
+                }
+              }
+            },
+            "user_id": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "61e733ac3e0fa10345bce081"
+                }
+              }
+            },
+            "createdAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-02-18T08:00:00Z"
+                }
+              }
+            },
+            "updatedAt": {
+              "type": "object",
+              "properties": {
+                "type": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "format": {
+                  "type": "string",
+                  "example": "date-time"
+                },
+                "example": {
+                  "type": "string",
+                  "example": "2024-02-18T08:00:00Z"
+                }
+              }
+            }
+          }
+        },
+        "required": {
+          "type": "array",
+          "example": [
+            "individual1_id",
+            "individual2_id",
+            "relationship_type",
+            "user_id",
             "createdAt",
             "updatedAt"
           ],
