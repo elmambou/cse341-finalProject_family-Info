@@ -9,311 +9,288 @@ const doc = {
   schemes: ['https'],
   consumes: ['application/json'],
   produces: ['application/json'],
-  "tags": [
+  tags: [
     {
-      "name": "users",
-      "description": "Operations related to users"
+      name: 'users',
+      description: 'Operations related to users'
     },
     {
-      "name": "addresses",
-      "description": "Operations related to addresses"
+      name: 'addresses',
+      description: 'Operations related to addresses'
     },
     {
-      "name": "relationships",
-      "description": "Operations related to relationships"
+      name: 'relationships',
+      description: 'Operations related to relationships'
     }
   ],
-  "schemes": [
-    "https"
-  ],
-  "consumes": [
-    "application/json"
-  ],
-  "produces": [
-    "application/json"
-  ],
-  "paths": {
-    "/addresses": {
-      "get": {
-        "summary": "Get all addresses",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Address"
+  paths: {
+    '/addresses': {
+      get: {
+        summary: 'Get all addresses',
+        responses: {
+          200: {
+            description: 'OK',
+            schema: {
+              type: 'array',
+              items: {
+                $ref: '#/definitions/Address'
               }
             }
           }
         }
       },
-      "post": {
-        "summary": "Create a new address",
-        "parameters": [
+      post: {
+        summary: 'Create a new address',
+        parameters: [
           {
-            "name": "address",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Address"
+            name: 'address',
+            in: 'body',
+            required: true,
+            schema: {
+              $ref: '#/definitions/Address'
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
+        responses: {
+          201: {
+            description: 'Created'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       }
     },
-    "/addresses/{id}": {
-      "get": {
-        "summary": "Get address by ID",
-        "parameters": [
+    '/addresses/{id}': {
+      get: {
+        summary: 'Get address by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/Address"
+        responses: {
+          200: {
+            description: 'OK',
+            schema: {
+              $ref: '#/definitions/Address'
             }
           }
         }
       },
-      "put": {
-        "summary": "Update address by ID",
-        "parameters": [
+      put: {
+        summary: 'Update address by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           },
           {
-            "name": "address",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Address"
+            name: 'address',
+            in: 'body',
+            required: true,
+            schema: {
+              $ref: '#/definitions/Address'
             }
           }
         ],
-        "responses": {
-          "204": {
-            "description": "No Content"
+        responses: {
+          204: {
+            description: 'No Content'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       },
-      "delete": {
-        "summary": "Delete address by ID",
-        "parameters": [
+      delete: {
+        summary: 'Delete address by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           }
         ],
-        "responses": {
-          "204": {
-            "description": "No Content"
+        responses: {
+          204: {
+            description: 'No Content'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       }
     },
-    "/relationships": {
-      "get": {
-        "summary": "Get all relationships",
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Relationship"
+    '/relationships': {
+      get: {
+        summary: 'Get all relationships',
+        responses: {
+          200: {
+            description: 'OK',
+            schema: {
+              type: 'array',
+              items: {
+                $ref: '#/definitions/Relationship'
               }
             }
           }
         }
       },
-      "post": {
-        "summary": "Create a new relationship",
-        "parameters": [
+      post: {
+        summary: 'Create a new relationship',
+        parameters: [
           {
-            "name": "relationship",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Relationship"
+            name: 'relationship',
+            in: 'body',
+            required: true,
+            schema: {
+              $ref: '#/definitions/Relationship'
             }
           }
         ],
-        "responses": {
-          "201": {
-            "description": "Created"
+        responses: {
+          201: {
+            description: 'Created'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       }
     },
-    "/relationships/{id}": {
-      "get": {
-        "summary": "Get relationship by ID",
-        "parameters": [
+    '/relationships/{id}': {
+      get: {
+        summary: 'Get relationship by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "$ref": "#/definitions/Relationship"
+        responses: {
+          200: {
+            description: 'OK',
+            schema: {
+              $ref: '#/definitions/Relationship'
             }
           }
         }
       },
-      "put": {
-        "summary": "Update relationship by ID",
-        "parameters": [
+      put: {
+        summary: 'Update relationship by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           },
           {
-            "name": "relationship",
-            "in": "body",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Relationship"
+            name: 'relationship',
+            in: 'body',
+            required: true,
+            schema: {
+              $ref: '#/definitions/Relationship'
             }
           }
         ],
-        "responses": {
-          "204": {
-            "description": "No Content"
+        responses: {
+          204: {
+            description: 'No Content'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       },
-      "delete": {
-        "summary": "Delete relationship by ID",
-        "parameters": [
+      delete: {
+        summary: 'Delete relationship by ID',
+        parameters: [
           {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
+            name: 'id',
+            in: 'path',
+            required: true,
+            type: 'string'
           }
         ],
-        "responses": {
-          "204": {
-            "description": "No Content"
+        responses: {
+          204: {
+            description: 'No Content'
           },
-          "500": {
-            "description": "Internal Server Error"
+          500: {
+            description: 'Internal Server Error'
           }
         }
       }
     }
   },
-  "definitions": {
-    "Address": {
-      "type": "object",
-      "properties": {
-        "street": {
-          "type": "string",
-          "example": "123 Main St"
+  definitions: {
+    Address: {
+      type: 'object',
+      properties: {
+        street: {
+          type: 'string'
         },
-        "city": {
-          "type": "string",
-          "example": "Anytown"
+        city: {
+          type: 'string'
         },
-        "state": {
-          "type": "string",
-          "example": "CA"
+        state: {
+          type: 'string'
         },
-        "zipcode": {
-          "type": "string",
-          "example": "12345"
+        zipcode: {
+          type: 'string'
         },
-        "country": {
-          "type": "string",
-          "example": "USA"
+        country: {
+          type: 'string'
         },
-        "user_id": {
-          "type": "string",
-          "example": "61e733ac3e0fa10345bce081"
+        user_id: {
+          type: 'string'
         },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time",
-          "example": "2023-07-10T08:00:00Z"
+        createdAt: {
+          type: 'string',
+          format: 'date-time'
         },
-        "updatedAt": {
-          "type": "string",
-          "format": "date-time",
-          "example": "2023-07-10T08:00:00Z"
+        updatedAt: {
+          type: 'string',
+          format: 'date-time'
         }
       },
-      "required": ["street", "city", "state", "zipcode", "country", "user_id", "createdAt", "updatedAt"]
+      required: ['street', 'city', 'state', 'zipcode', 'country', 'user_id', 'createdAt', 'updatedAt']
     },
-    "Relationship": {
-      "type": "object",
-      "properties": {
-        "individual1_id": {
-          "type": "string",
-          "example": "61e733ac3e0fa10345bce084"
+    Relationships: {
+      type: 'object',
+      properties: {
+        individual1_id: {
+          type: 'string'
         },
-        "individual2_id": {
-          "type": "string",
-          "example": "61e733ac3e0fa10345bce086"
+        individual2_id: {
+          type: 'string'
         },
-        "relationship_type": {
-          "type": "string",
-          "example": "child"
+        relationship_type: {
+          type: 'string'
         },
-        "user_id": {
-          "type": "string",
-          "example": "61e733ac3e0fa10345bce081"
+        user_id: {
+          type: 'string'
         },
-        "createdAt": {
-          "type": "string",
-          "format": "date-time",
-          "example": "2024-02-18T08:00:00Z"
+        createdAt: {
+          type: 'string',
+          format: 'date-time'
         },
-        "updatedAt": {
-          "type": "string",
-          "format": "date-time",
-          "example": "2024-02-18T08:00:00Z"
+        updatedAt: {
+          type: 'string',
+          format: 'date-time'
         }
       },
-      "required": ["individual1_id", "individual2_id", "relationship_type", "user_id", "createdAt", "updatedAt"]
+      required: ['individual1_id', 'individual2_id', 'relationship_type', 'user_id', 'createdAt', 'updatedAt']
     }
   }
 };

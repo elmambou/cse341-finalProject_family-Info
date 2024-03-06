@@ -22,7 +22,7 @@ const createRelationship = async (req, res) => {
   const relationship = {
     individual1_id: req.body.individual1_id,
     individual2_id: req.body.individual2_id,
-    relationship: req.body.relationship,
+    relationship_type: req.body.relationship_type,
     user_id: req.body.user_id,
     createdAt: req.body.createdAt,
     updatedAt: req.body.updatedAt
@@ -41,7 +41,7 @@ const updateRelationship = async (req, res) => {
   const relationship = {
     individual1_id: req.body.individual1_id,
     individual2_id: req.body.individual2_id,
-    relationship: req.body.relationship,
+    relationship_type: req.body.relationship_type,
     user_id: req.body.user_id,
     createdAt: req.body.createdAt,
     updatedAt: req.body.updatedAt

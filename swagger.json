@@ -198,10 +198,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "123 Main St"
                 }
               }
             },
@@ -211,10 +207,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "Anytown"
                 }
               }
             },
@@ -224,10 +216,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "CA"
                 }
               }
             },
@@ -237,10 +225,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "12345"
                 }
               }
             },
@@ -250,10 +234,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "USA"
                 }
               }
             },
@@ -263,10 +243,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "61e733ac3e0fa10345bce081"
                 }
               }
             },
@@ -280,10 +256,6 @@
                 "format": {
                   "type": "string",
                   "example": "date-time"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "2023-07-10T08:00:00Z"
                 }
               }
             },
@@ -297,10 +269,6 @@
                 "format": {
                   "type": "string",
                   "example": "date-time"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "2023-07-10T08:00:00Z"
                 }
               }
             }
@@ -324,7 +292,7 @@
         }
       }
     },
-    "Relationship": {
+    "Relationships": {
       "type": "object",
       "properties": {
         "type": {
@@ -340,10 +308,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "61e733ac3e0fa10345bce084"
                 }
               }
             },
@@ -353,10 +317,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "61e733ac3e0fa10345bce086"
                 }
               }
             },
@@ -366,10 +326,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "child"
                 }
               }
             },
@@ -379,10 +335,6 @@
                 "type": {
                   "type": "string",
                   "example": "string"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "61e733ac3e0fa10345bce081"
                 }
               }
             },
@@ -396,10 +348,6 @@
                 "format": {
                   "type": "string",
                   "example": "date-time"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "2024-02-18T08:00:00Z"
                 }
               }
             },
@@ -413,10 +361,6 @@
                 "format": {
                   "type": "string",
                   "example": "date-time"
-                },
-                "example": {
-                  "type": "string",
-                  "example": "2024-02-18T08:00:00Z"
                 }
               }
             }
