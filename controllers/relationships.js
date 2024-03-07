@@ -3,7 +3,7 @@
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-exports.getAll = async (req, res) => {
+const getAll = async (req, res) => {
     try {
         const relationships = await mongodb.getDb().db().collection('relationships').aggregate([
             {
