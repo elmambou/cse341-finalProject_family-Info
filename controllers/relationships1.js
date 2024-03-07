@@ -1,44 +1,17 @@
-// controllers/relationships.js
-
 const mongodb = require('../db/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-exports.getAll = async (req, res) => {
-    try {
-        const relationships = await mongodb.getDb().db().collection('relationships').aggregate([
-            {
-                $lookup: {
-                    from: 'individuals', // The name of the collection you want to join
-                    localField: 'individual1_id',
-                    foreignField: '_id',
-                    as: 'individual1'
-                }
-            },
-            {
-                $lookup: {
-                    from: 'individuals',
-                    localField: 'individual2_id',
-                    foreignField: '_id',
-                    as: 'individual2'
-                }
-            },
-            {
-                $lookup: {
-                    from: 'users',
-                    localField: 'user_id',
-                    foreignField: '_id',
-                    as: 'user'
-                }
-            }
-            // Add more lookup stages if you want to join more collections
-        ]).toArray();
 
-        res.json(relationships);
-    } catch (error) {
-        console.error(error);
-        res.status(500).json({ message: 'Internal server error' });
-    }
+
+
+const getAll = async (req, res) => {
+  const result = await mongodb.getDb().db().collection('relationships').find();
+  result.toArray().then((lists) => {
+    res.setHeader('Content-Type', 'application/json');
+    res.status(200).json(lists);
+  });
 };
+
 
 const getSingle = async (req, res) => {
   const relationshipId = new ObjectId(req.params.id);
